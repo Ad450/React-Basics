@@ -3,6 +3,7 @@ import Header from "./header";
 import Footer from "./footer";
 import FormField from "./formfield";
 import Note from "./note";
+
 function App() {
   const [noteList, setNote] = useState([]);
   function submit(content, header) {
@@ -17,6 +18,7 @@ function App() {
       ];
     });
   }
+
   function deleteNote(id) {
     setNote((previousNote) => {
       return previousNote.filter((noteItem, index) => {
@@ -29,6 +31,7 @@ function App() {
     <div>
       <Header />
       <FormField handleSubmit={submit} />
+
       {noteList.map((note, index) => {
         return (
           <Note
@@ -42,6 +45,7 @@ function App() {
           />
         );
       })}
+
       <Footer />
     </div>
   );

@@ -8,14 +8,17 @@ function FormField(props) {
     setHeader(event.target.value);
     // console.log(event.target.value);
   }
+
   function handleContentChange(event) {
     setContent(event.target.value);
     // console.log(event.target.value);
   }
+
   function handleOnchange(event) {
     props.handleSubmit(content, header);
     event.preventDefault();
   }
+
   return (
     <div className="formClass">
       <form onSubmit={handleOnchange}>
